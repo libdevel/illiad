@@ -1,0 +1,344 @@
+<div class="row">
+    <div class="col-lg-12">
+        
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Transaction Number</span>
+                <strong>
+                <span class="field-value"><#TRANSACTION field='TransactionNumber'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Transaction Status</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='TransactionStatus'></span>
+                </strong>
+            </div>
+        </div>
+
+        <!--Article Fields - Only show if the RequestType is Article -->
+        <div class="<#TRANSACTION field='RequestType' displayStyle='CompareValue' compareValue='Article' disabledValue='d-none'>">
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Journal Title</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoJournalTitle'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Volume</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoJournalVolume'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Issue</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoJournalIssue'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Month</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoJournalMonth'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Year</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoJournalYear'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Call Number</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='CallNumber'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Box(es)/Folder(s)</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='ItemVolume'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Inclusive Pages</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoJournalInclusivePages'></span>
+                    </strong>
+                </div>
+            </div>
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Article Title</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoArticleTitle'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Article Author</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoArticleAuthor'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Item Author</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoItemAuthor'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Item Place</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoItemPlace'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Item Publisher</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoItemPublisher'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Item Author</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoItemAuthor'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Item Edition</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='PhotoItemEdition'></span>
+                    </strong>
+                </div>
+            </div>
+        </div>
+        
+        <!--Loan Fields - Only show if the RequestType is Loan -->
+        <div class="<#TRANSACTION field='RequestType' displayStyle='CompareValue' compareValue='Loan' disabledValue='d-none'>">
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Title</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='LoanTitle'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Author</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='LoanAuthor'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Publisher</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='LoanPublisher'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Place</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='LoanPlace'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Date</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='LoanDate'></span>
+                    </strong>
+                </div>
+            </div>
+
+            <div class="field list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span>Edition</span>
+                    <strong>
+                        <span class="field-value"><#TRANSACTION field='LoanEdition'></span>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <!--Other Fields-->
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>ISSN/ISBN</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='ISSN'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Cited In</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='CitedIn'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Cited Title</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='CitedTitle'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Cited Date</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='CitedDate'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Cited Volume</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='CitedVolume'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Cited Pages</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='CitedPages'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Not Wanted After</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='NotWantedAfter'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Accept Non English</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='AcceptNonEnglish'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Accept Alternate Edition</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='AcceptAlternateEdition'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Document Type</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='DocumentType'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Due Date</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='DueDate'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Renewals Allowed?</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='RenewalsAllowed'></span>
+                </strong>
+            </div>
+        </div>
+
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Max Cost</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='MaxCost'></span>
+                </strong>
+            </div>
+        </div>
+        
+        <!--Should only display if Cancelled by ILL Staff-->
+        <div class="field list-group-item">
+            <div class="d-flex justify-content-between">
+                <span>Reason for Cancellation</span>
+                <strong>
+                    <span class="field-value"><#TRANSACTION field='ReasonforCancellation'></span>
+                </strong>
+            </div>
+        </div>
+    </div>
+</div>

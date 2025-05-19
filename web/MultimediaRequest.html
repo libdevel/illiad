@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>ILLiad - Multimedia Request</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html">  
+
+	<div id="content" class="container" role="heading" aria-label="Content">
+		<form action="illiad.dll" method="post" name="MultimediaRequest">
+			<input type="hidden" name="ILLiadForm" value="MultimediaRequest">
+			<input type="hidden" name="Username" value="<#PARAM name='Username'>">
+			<input type="hidden" name="SessionID" value="<#PARAM name='SessionID'>">
+			<input type="hidden" name="NotWantedAfter" value="<#PARAM name='NotWantedAfter'>">
+			
+			<fieldset>
+
+				<h2 class="page-header">Multimedia Request</h2>
+				
+				<section name="multimediarequest-info">
+					
+					<div class="form-group col-md-9">
+						<label for="LoanTitle">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanTitle'>">
+									Title
+									<span class="req">(required)</span>
+								</span>
+								<br/>
+								<span class="small-notes">
+									Please do not abbreviate unless your citation is abbreviated
+								</span> 
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanTitle" id="LoanTitle" value="<#PARAM name='LoanTitle'>">
+					</div>
+			
+					<div class="form-group col-md-9">  
+						<label for="LoanAuthor">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanAuthor'>">
+									Artist/Composer/Producer
+									<span class="req">(required)</span>
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanAuthor" id="LoanAuthor" value="<#PARAM name='LoanAuthor'>">
+					</div>
+			
+					<div class="form-group col-md-9">
+						<label for="LoanPublisher">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanPublisher'>">
+									Publisher
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanPublisher" id="LoanPublisher" value="<#PARAM name='LoanPublisher'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="LoanPlace">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanPlace'>">
+									Place of Publication
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanPlace" id="LoanPlace" value="<#PARAM name='LoanPlace'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="LoanDate">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanDate'>">
+									Date of Publication
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanDate" id="LoanDate" value="<#PARAM name='LoanDate'>">
+					</div>
+
+					<div class="form-group col-md-9">
+						<label for="Format">
+							<span class="field">
+								<span class="<#ERROR name='ERRORFormat'>">
+									Format
+								</span>
+							</span>
+						</label>
+						<select id="Format" name="Format" size="1" class="custom-select mr-sm-2">
+							<option selected><#PARAM name='Format'></option>
+							<option>CD</option>
+							<option>Blu Ray</option>
+							<option>Cassette</option>
+							<option>DVD</option>
+						</select>
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="ISSN">
+							<span class="field">
+								<span class="<#ERROR name='ERRORISSN'>">
+									ISBN (International Standard Book Number)
+								</span>
+								<br>
+							<span class="small-notes">
+								If given will speed request processing
+							</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="ISSN" id="ISSN" value="<#PARAM name='ISSN'>">
+					</div>
+				</section>
+
+				<#INCLUDE filename="include_request_cited.html">                
+				<#INCLUDE filename="include_request_buttons.html">
+			</fieldset>
+		</form>
+		<#INCLUDE filename="include_footer.html">
+    </div>    
+</body>
+</html>

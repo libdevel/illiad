@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Pragma" content="no-cache">
+	<title>ILLiad Logon</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+
+	<#INCLUDE filename="include_header.html">
+
+	<h1>ILLiad</h1> 
+
+	<div class="alerts-bar">
+		<div class="container" id="webAlerts"></div>
+	</div>
+
+	<div id="content" class="container" aria-label="Content">
+		<div id="status" class="container"><#STATUS></div>
+	
+			<form action="<#DLL>" method="post" name="Logon">
+				<input type="hidden" name="ILLiadForm" value="Logon">
+				<#FORMSTATE>
+
+				<div class="logon-directions">
+					<span class="new-line">Enter your user information below.</span>
+					<span class="new-line">Then press the Logon to ILLiad button to continue.</span>
+				</div>
+
+				<div class="logon-field form-group col-md-8">
+					<label for="username">
+						Username
+					</label>
+					<input type="text" class="form-control" name="username" id="username" value="">
+				</div>
+
+				<div class="logon-field form-group col-md-8">
+					<label for="password">
+						Password
+						</label>
+					<input type="password" name="password" class="form-control" id="password" autocomplete="off">
+				</div>
+				<button class="btn btn-primary btn-md" type="submit" name="SubmitButton" value="Logon to ILLiad">Logon to ILLiad</button>
+			</form>
+
+		<div role="heading" class="container" aria-label="Account creation and password reset">
+			<form action="illiad.dll?Action=10&Form=79" method="post" name="RegisterForm" id="RegisterForm">
+				<#FORMSTATE>
+				<div class="forgot-password-link">
+					<a href="<#ACTION action='10' form='84'>">
+						 <span aria-hidden="true" class="fas fa-question-circle"></span>  Forgot Password?
+					</a>
+				</div>
+				<div class="first-time-link">
+					<a href="#" onclick="RegisterForm.submit(); return false;">
+						 <span aria-hidden="true" class="fas fa-user-plus"></span>  First Time Users
+					</a>
+				</div>
+			</form>
+		</div>
+	
+		<#INCLUDE filename="include_footer.html">
+		<!-- Logon2.html -->
+	</div>
+</body>
+</html>

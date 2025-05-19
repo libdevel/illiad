@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>ILLiad - Request History</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+	<#INCLUDE filename="include_header.html">
+	<#INCLUDE filename="include_menu.html">
+
+	<div id="content" class="container" role="heading" aria-label="Content">
+		<h2 class="page-header"><span aria-hidden="true" class="fas fa-check-circle fa-1x"></span> Completed Requests</h2>			  				
+		<#DATAREPEATER name="ViewRequestHistory" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="You have no requests" orderby="TransactionNumber DESC">
+
+		<#INCLUDE filename="include_footer.html">  
+	</div>
+	
+</body>
+</html>

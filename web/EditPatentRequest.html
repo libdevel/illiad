@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>ILLiad - Edit Patent Request</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html">  
+	
+	<div id="content" class="container" role="heading" aria-label="Content">
+		<form action="illiad.dll" method="post" name="PatentRequest">
+			<input type="hidden" name="ILLiadForm" value="PatentRequest">
+			<input type="hidden" name="Username" value="<#PARAM name='Username'>">
+			<input type="hidden" name="SessionID" value="<#PARAM name='SessionID'>">
+			<input type="hidden" name="ESPNumber" value="<#PARAM name='ESPNumber'>">
+			<input type="hidden" name="CallNumber" value="<#PARAM name='CallNumber'>">
+			<input type="hidden" name="NotWantedAfter" value="<#PARAM name='NotWantedAfter'>">
+			
+			<fieldset>
+
+				<h2 class="page-header">Edit Patent Request</h2>
+				
+				<section name="patentrequest-info">
+					
+					<div class="form-group col-md-9">  
+						<label for="PhotoJournalTitle">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanAuthor'>">
+									Title
+									<span class="req">(required)</span>
+								</span>
+								<br>
+								<span class="small-notes">
+									Please do not abbreviate unless your citation is abbreviated  
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoJournalTitle" id="PhotoJournalTitle" value="<#PARAM name='PhotoJournalTitle'>">
+					</div>
+						
+					<div class="form-group col-md-9">
+						<label for="PhotoItemAuthor">
+							<span class="field">
+								<span class="<#ERROR name='ERRORPhotoItemAuthor'>">
+									Author   
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoItemAuthor" id="PhotoItemAuthor" value="<#PARAM name='PhotoItemAuthor'>">	
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="PhotoItemPlace">
+							<span class="field">
+								<span class="<#ERROR name='ERRORPhotoItemPlace'>">
+									Country   
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoItemPlace" id="PhotoItemPlace" value="<#PARAM name='PhotoItemPlace'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="PhotoJournalYear">
+							<span class="field">
+								<span class="<#ERROR name='ERRORPhotoJournalYear'>">
+									Year   
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoJournalYear" id="PhotoJournalYear" value="<#PARAM name='PhotoJournalYear'>">
+					</div>
+				
+					<div class="form-group col-md-9">
+						<label for="PhotoItemEdition">
+							<span class="field">
+								<span class="<#ERROR name='ERRORPhotoItemEdition'>">
+									Patent Number   
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoItemEdition" id="PhotoItemEdition" value="<#PARAM name='PhotoItemEdition'>">
+					</div>
+					
+					<!--<div class="form-group col-md-9">
+						<label for="CallNumber">					
+							<span class="field">
+								<span class="<#ERROR name='ERRORCallNumber'>">
+									Call Number
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="CallNumber" id="CallNumber" value="<#PARAM name='CallNumber'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="ESPNumber">
+							<span class="field">
+								<span class="<#ERROR name='ERRORESPNumber'>">
+									OCLC or Docline UI Number
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="ESPNumber" id="ESPNumber" value="<#PARAM name='ESPNumber'>">
+					</div>-->
+				
+					<div class="form-group col-md-9">
+						<label for="Notes">
+							<span class="field">
+								<span class="<#ERROR name='ERRORNotes'>">  
+									Notes   
+								</span>
+								<br/>
+								<span class="small-notes">
+									Put any information here that may help us find the item, as well as any other pertinent information.</span>
+							</span>
+						</label>
+						<textarea id="Notes" name="Notes" rows="2" cols="40" class="form-control" value="<#PARAM name='Notes'>"></textarea><br>
+					</div>
+				</section>
+				<#INCLUDE filename="include_request_cited.html">                
+				<#INCLUDE filename="include_request_buttons.html">
+			</fieldset>
+		</form>
+		<#INCLUDE filename="include_footer.html">
+	</div>
+</body>
+</html>

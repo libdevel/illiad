@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>ILLiad - Edit Account Information</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+	<#INCLUDE filename="include_header.html">
+	<#INCLUDE filename="include_menu.html">
+  
+    <div id="content" class="container" role="heading" aria-label="Content">
+		<div class="default-table">
+			<h2 class="page-header">Current Accounts</h2>
+			<#TABLE name="ShowCurrentAccounts" noDataAction="ShowMessageRow" noDataMessage="No Accounts"><br>
+		</div>
+					
+		<form action="illiad.dll" method="post" name="EditAccountForm">
+			<input type="hidden" name="ILLiadForm" value="EditAccountForm">
+			<input type="hidden" name="Username" value="<#PARAM name='Username'>">
+			<input type="hidden" name="SessionID" value="<#PARAM name='SessionID'>">
+			<#FORMSTATE>
+			            
+			<div class="mainContent">   
+				<fieldset>
+					<h2 class="page-header">Add Account</h2> 
+					<section name="article-info">
+						<div class="form-group col-md-9">
+							<label for="AccountNo">
+								<span class="field">
+									<span class="<#ERROR name='ERRORAccountNo'>">
+										Account Number   
+									</span>
+								</span>
+							</label>
+							<input id="AccountNo" name="AccountNo" type="text" size="40" class="form-control" value="<#PARAM name='AccountNo'>"><br>		
+						</div>
+							
+						<div class="form-group col-md-9">
+							<label for="Type">
+								<span class="field">
+									<span class="<#ERROR name='ERRORType'>">
+										Account Type
+									</span>
+								</span>
+							</label>
+							<input id="Type" name="Type" type="text" size="40" class=" form-control" value="<#PARAM name='Type'>"><br>
+						</div>
+						
+						<div class="form-group col-md-9">
+							<label for="Description">
+								<span class="field">
+									<span class="<#ERROR name='ERRORDescription'>">
+										Description
+									</span>
+								</span>
+							</label>
+							<input id="Description" name="Description" type="text" size="40" class="form-control" value="<#PARAM name='Description'>"><br>
+						</div>
+						
+						<div class="form-group col-md-9">
+							<label for="CCExpirationDate">
+								<span class="field">
+									<span class="<#ERROR name='ERRORCCExpirationDate'>">
+										Expiration Date
+									</span>
+								</span>
+							</label>
+							<input id="CCExpirationDate" name="CCExpirationDate" type="text" size="40" class="form-control" value="<#PARAM name='CCExpirationDate'>"><br>
+						</div>
+						
+						<div class="form-group col-md-9">
+							<label for="CCNameonCard">
+								<span class="field">
+									<span class="<#ERROR name='ERRORCCNameonCard'>">
+										Name on Card
+									</span>
+								</span>
+							</label>
+							<input id="CCNameonCard" name="CCNameonCard" type="text" size="40" class="form-control" value="<#PARAM name='CCNameonCard'>"><br>
+						</div>
+
+					</section>
+
+                    <div class="right">
+						<input class="btn btn-primary btn-md" type="submit" name="SubmitButton" value="Add Account">
+					</div>
+					
+				</fieldset>
+			</div>
+		</form>		
+      	<#INCLUDE filename="include_footer.html">
+    </div>    
+</body>
+</html>

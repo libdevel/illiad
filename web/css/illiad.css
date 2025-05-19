@@ -1,0 +1,183 @@
+/*
+LEGAL
+=====
+Copyright 2020 Atlas Systems, Inc. http://www.atlas-sys.com
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+body { font-family: 'Roboto', sans-serif; color:#000;}
+
+
+/*These are CSS classes for the headers*/
+h1,h2,h3,h4,h5,h6 {font-family: 'Open Sans', sans-serif;}
+h1,h2,h3,h4,h5 {/* color:#08415c;*/}
+
+h1 {font-size: 36px; padding: 10px;text-align: center;}
+h2 {font-size: 30px; padding: 10px 0 8px;}
+
+.header-special, .header-detailed { margin-top: 1.5rem;font-size: 26px;padding: 15px 0 0;}
+
+.page-header {font-size: 26px;padding: 15px 0 0;}
+.section-header {font-size: 24px;padding: 0 0 10px;}
+
+img { vertical-align: middle; border-style: none;height: 110px;}
+
+.card-body {padding: 0.75rem 1.25rem;}
+.card-title {color: #08415c;font-size: 22px;padding: 10px 0 0;}
+
+label { font: bold 16px;width: 100%;}
+
+p {color: #000; font-size: 16px;padding: 10px;}
+a {color: #08415c; text-decoration: none; border-bottom: 1px dotted #ccc;}
+a:hover, a:focus { color: #946232;text-decoration: underline;border: 0px;}
+
+ul {color: #000; font-size: 16px; padding: 0 0 0 25px;word-wrap: normal;}
+
+.small-notes {/*color: #868e96;*/ font-size: 14px;padding: 4px 0 0;}
+.common-note { /*color: #868e96;*/ font-size: 16px; padding: 6px 0px;}
+.req { color: #c74827; font-size: 12px; padding:0 0 0 6px;text-align: right;}
+.fas {font-size: 16px;}
+
+form section {background-color: #f8f9fa; margin-bottom: 40px; padding: 15px;}
+
+/*These are the CSS classes for the header and footer */
+
+header {margin-bottom: 10px;}
+.head { background-color: #fff; height: auto;
+    padding: 10px; /*text-align: center;*/ width: 100%;}
+
+.logo { background-color: #000; }
+.logo h1{/*color: #fff;  display:inline-block;  max-height:75px;  margin-top: 10px; margin-bottom: 0px; margin-left:10px; padding:0px;*/}
+
+.broomelogo {/*float:left;*/ color:#eeb310;}
+.illiadlogo {/*float:right;*/ color: #fff;  display:inline-block;  max-height:75px;  margin: 10px; margin-bottom: 0px; margin-left:10px; padding:0px; font-size: 38px;}
+
+.foot { border-top: 1px solid #0000001a;font-size: 14px;margin-top: 1rem; padding: 1rem 0;}
+
+#status br {display: none;}
+
+.info-block { border-bottom: 1px solid #0000001a;margin-bottom: 1rem;padding: 1rem 0;}
+
+.new-line {display: block;}
+
+.bold {font-weight: bold;}
+
+/* Theses are CSS styling classes for logon/logout pages*/
+.logon-directions {border-bottom: 1px solid #0000001a; font-size: 18px; margin-bottom: 1rem; padding: 1rem 0;}
+
+.logout-message { font-size: 16px;}
+.logon-field {padding: 0 15px 0 0;}
+
+.forgot-password-link, .first-time-link{ padding: 10px 0 0;}
+
+/*These are CSS classes for the buttons*/
+.btn-primary, .btn-secondary, .btn-light { border: none; margin: 10px 0;}
+.btn-primary {background-color: #08415c;color: #fff;margin: 10px 5px 10px 0;}
+.btn-primary:disabled {background-color: #08415c;}
+.btn-secondary {background-color: #e2e3e5;color: #08415c;margin: 10px 5px 10px 0;}
+.btn-primary:hover {background-color: #52b3d9; color: #05171f;text-decoration: underline;}
+.btn-secondary:hover, .dropdown-item:focus, .dropdown-item:not(.disabled):hover {background-color: #a4a5a5;
+    color: #05171f;text-decoration: underline;}
+
+.badge-primary {background-color: #08415c;}
+.selectOptions { color: #08415c; padding: 20px 12px 6px;}
+
+
+/*These are CSS alert styling classes*/
+.btn-alert {color: #c74827; font-size: 14px; padding: 4px 12px 6px;}
+.btn-alert:hover {color: #08415c;}
+.alerts-bar{ background-color: #f1f4f7; margin: 0 0 20px;text-align: center;}
+
+
+.alert-secondary {color: #000; background-color: #e2e3e5; border-color: #d6d8db;}
+
+
+/*These are CSS styling classes for the navigation bar*/
+.main-navbar {background-color: #397b8f; color: #000;padding: 5px;
+    font: bold 26px 'Open Sans', sans-serif;font-kerning: auto;}
+
+nav li {margin: 0px 0px 0px 12px;}
+nav li a {font: bolder 16px 'Open Sans', sans-serif;text-decoration: none;border: 0px;}
+.navbar-dark .navbar-nav .nav-link {color: #fff;}
+.dropdown-item {font-size: 14px;}
+
+
+/*These are the CSS Styling classes for search*/
+#no-results-message {color: #868e96;font-size: 16px;padding: 4px 0 0;}
+.ui-datepicker-trigger {width: 35px;}
+.visit-date {padding-left: 0px;}
+.researcher-tag-count {padding: 0 5px 0 0;}
+.checkbox {padding-top: 20px;}
+.form-checkbox {padding: 10px 16px;}
+section[name='order-info'] .form-check, form[name='ChangeUserInformation'] .form-check {padding-left: 2.25rem;}
+.transaction-label {width: 33%;}
+#researcher-tags-input { width: 100%;}
+
+a.offscreen{
+    clip-path: inset(100%);
+    clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; /* added line */
+    width: 1px;
+}
+
+a.offscreen:focus{
+  position:relative;
+  clip:auto;
+  width:auto;
+  height:auto;
+  overflow:auto;
+}
+
+.hidden{display: none;}
+
+.modal-footer{padding: 0rem;}
+
+/* Tooltip container */
+.tool-tip { display: inline-block; position: relative;}
+
+/* Tooltip text */
+.tool-tip .tool-tip-text {
+    background-color: #555;
+    border-radius: 6px;
+    color: #fff;
+    font-size: small;
+    padding: 5px 0;
+    text-align: center;
+    visibility: hidden;
+
+    /* Position the tooltip text */
+    bottom: 125%;
+    left: 0%;
+    position: absolute;
+    z-index: 1;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tool-tip .tool-tip-text::after {
+    border-color: #555 transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+    content: "";
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    top: 100%;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tool-tip:hover .tool-tip-text { opacity: 1; visibility: visible;}
+
+.form-inline{ margin: 20px;}
+.btn-outline-primary{color: #fff;border-color: #fff; font-size: 26px;}
+.btn-outline-primary:hover{ background-color:#52b3d9;color: #000; border-color: #52b3d9;}
+
+#searchType, #SearchTypeAll {display: inline !important;}

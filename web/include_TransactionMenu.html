@@ -1,0 +1,51 @@
+<div class="d-flex justify-content-center">
+    <div class="btn-group" role="group">
+
+        <a class="btn btn-light <#TRANSACTION field='RequestActionAllowed' name='Edit' disabledValue='disabled'>"
+            href="<#ACTION action='20' form='63'>&Value=<#TRANSACTION field='TransactionNumber'>" class="menuEdit">
+             <span aria-hidden="true" class="fas fa-edit text-primary"></span>  Edit Request
+        </a>
+
+        <a class="btn btn-light <#TRANSACTION field='RequestActionAllowed' name='Cancel' disabledValue='disabled'>"
+            href="<#ACTION action='21' type='10'>&Value=<#TRANSACTION field='TransactionNumber'>" class="menuCancel">
+             <span aria-hidden="true" class="fas fa-ban text-danger"></span>  Cancel Request
+        </a>
+    
+        <div class="<#TRANSACTION field='RequestType' displayStyle='CompareValue' compareValue='Loan' disabledValue='d-none'>">
+            <a class="btn btn-light <#TRANSACTION field='RequestActionAllowed' name='Renew' disabledValue='disabled'>"
+                href="<#ACTION action='11' form='67'>&Value=<#TRANSACTION field='TransactionNumber'>" class="menuRenew">
+                <span aria-hidden="true" class="fas fa-calendar-alt "></span>  Renew
+            </a>
+        </div>
+        
+        <a class="btn btn-light <#TRANSACTION field='RequestActionAllowed' name='Resubmit' disabledValue='disabled'>"
+            href="<#ACTION action='11' form='71'>&Value=<#TRANSACTION field='TransactionNumber'>" class="menuResubmit">            
+            <span aria-hidden="true" class="fas fa-redo"></span>  Resubmit Request
+        </a>
+
+        <a class="btn btn-light <#TRANSACTION field='RequestActionAllowed' name='Clone' disabledValue='disabled'>"
+            href="<#ACTION action='11' form='110'>&Value=<#TRANSACTION field='TransactionNumber'>" class="menuClone">
+             <span aria-hidden="true" class="fas fa-clone text-primary"></span>  Clone Request
+        </a>
+    
+        <div class="<#TRANSACTION field='RequestType' displayStyle='CompareValue' compareValue='Article' disabledValue='d-none'>">
+            <a class="btn btn-light <#TRANSACTION field='RequestActionAllowed' name='ViewPDF' disabledValue='disabled'>"
+                href="<#ACTION action='10' form='75'>&Value=<#TRANSACTION field='TransactionNumber'>" class="menuViewPdf">
+                <span aria-hidden="true" class="fas fa-eye"></span>  View Item
+            </a>
+    
+            <a class="btn btn-light <#TRANSACTION field='RequestActionAllowed' name='DeletePDF' disabledValue='disabled'>"
+                href="<#ACTION action='22' type='11'>&Value=<#TRANSACTION field='TransactionNumber'>" class="menuDeletePdf">
+                <span aria-hidden="true" class="fas fa-trash-alt"></span>  Delete Item
+            </a>
+			
+            <a class="btn btn-light <#TRANSACTION field='RequestActionAllowed' name='UndeletePDF' disabledValue='hidden'>"
+                href="<#ACTION action='21' type='11'>&Value=<#TRANSACTION field='TransactionNumber'>" class="menuUndeletePdf">
+                <span aria-hidden="true" <span class="fa-stack" style="vertical-align: top;">
+					<span class="fas fa-trash-alt fa-stack-1x"></span>
+					<span class="fas fa-ban fa-stack-2x text-danger"></span></span>  Undelete Item
+            </a>
+        </div>
+        
+    </div>
+</div>

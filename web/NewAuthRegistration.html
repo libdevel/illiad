@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>ILLiad - New Authenticated User Registration</title>
+    <#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html">
+	
+    <div id="content" class="container" role="heading" aria-label="Content">
+        <form action="illiad.dll" method="post" name="NewAuthRegistration">
+            <input type="hidden" name="ILLiadForm" value="NewAuthRegistration">
+            <input type="hidden" name="NotificationMethod" value="Electronic">
+            <#FORMSTATE>
+
+            <fieldset>
+
+                <h2 class="page-header">Change Personal Information</h2>
+
+                <section name="user-info">
+
+                    <h3 class="section-header">User Information</h3>
+
+                    <div class="form-group col-md-5">
+                        <label for="FirstName">
+                            <span class="<#ERROR name='ERRORFirstName'>">
+                                First Name
+                                <span class="req">(required)</span>
+                            </span>
+                         </label>
+                        <input type="text" class="form-control" name="FirstName" id="FirstName" value="<#PARAM name='FirstName'>">
+                    </div>
+
+                    <div class="form-group col-md-5">
+                        <label for="LastName">
+                            <span class="<#ERROR name='ERRORLastName'>">
+                                Last Name
+                                <span class="req">(required)</span>
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" name="LastName" id="LastName" value="<#PARAM name='LastName'>">
+                    </div>
+
+                    <div class="form-group col-md-5">
+                        <label for="SSN">
+                            <span class="<#ERROR name='ERRORSSN'>">
+                                ID Number
+                                <span class="req">(required)</span>
+                            </span>
+                            </label>
+                        <input id="SSN" name="SSN" class="form-control" value="<#PARAM name='SSN'>">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="EMailAddress">
+                            <span class="<#ERROR name='ERROREMailAddress'>">
+                                Email Address
+                                <span class="req">(required)</span>
+                            </span>
+                         </label>
+                        <input type="text" class="form-control" name="EMailAddress" id="EMailAddress" value="<#PARAM name='EMailAddress'>">
+                    </div>
+
+                    <div class="form-group col-md-5">
+                        <label for="Phone">
+                            <span class="field">
+                                <span class="<#ERROR name='ERRORPhone'>">
+                                    Daytime Phone
+                                    <span class="req">(required)</span>
+                                </span>                               
+                            </span>
+                            </label>
+                        <input type="text" class="form-control" name="Phone" id="Phone" value="<#PARAM name='Phone'>">
+                    </div>
+                
+                    <div class="form-group col-md-5">
+                        <label for="MobilePhone">
+                            <span class="field">
+                                <span class="<#ERROR name='ERRORMobilePhone'>"> 
+                                    Mobile Phone 
+                                </span>
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" name="MobilePhone" id="MobilePhone" value="<#PARAM name='MobilePhone'>">
+                    </div>
+
+                    <div class="form-group col-md-5">
+                        <label for="Department">
+                            <span class="field">
+                                <span class="<#ERROR name='ERRORDepartment'>">
+                                    Department
+                                </span>
+                            </span>
+                            <select id="Department" name="Department" size="1" class="custom-select mr-sm-2">
+                                <#OPTION name="custom" groupname="Department" selectedValue="<#PARAM name='Department'>">
+                            </select><br>
+                        </label>
+                    </div>
+
+                    <div class="form-group col-md-5">
+                        <label for="StatusGroup">
+                            <span class="field">
+                                <span class="<#ERROR name='ERRORStatus'>">
+                                    Status 
+                                    <span class="req">(required)</span>
+                                </span>
+                            </span>
+                            <select id="StatusGroup" name="StatusGroup" size="1" class="custom-select mr-sm-2">
+                                <#OPTION name="custom" groupname="StatusGroup" selectedValue="<#PARAM name='StatusGroup'>">
+                            </select>
+                            <br>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group col-md-5" class="hidden">
+                        <label for="NVTGC">
+                            <span class="field">
+                                <span class="<#ERROR name='ERRORNVTGC'>">
+                                    Delivery Location 
+                                </span>
+                            </span>
+                            <select id="NVTGC" name="NVTGC" size="1" class="custom-select mr-sm-2">
+                                <#OPTION name="custom" groupname="NVTGC" selectedValue="<#PARAM name='NVTGC'>">						
+                            </select>
+                            <br/>
+                        </label>
+                    </div>
+
+                </section>
+
+                <section name="address-info">
+
+                    <h3 class="section-header">Address Information</h3>
+
+                    <div class="form-group col-md-6">
+                        <label for="Address">
+                            <span class="<#ERROR name='ERRORAddress'>">
+                                Address Line 1
+                                <span class="req">(required)</span>
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" name="Address" id="Address" value="<#PARAM name='Address'>">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="Address2">
+                            <span class="<#ERROR name='ERRORAddress2'>">
+                                Address Line 2
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" name="Address2" id="Address2" value="<#PARAM name='Address2'>">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="City">
+                            <span class="<#ERROR name='ERRORCity'>">
+                                Address City
+                                <span class="req">(required)</span>
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" name="City" id="City" value="<#PARAM name='City'>">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="State">
+                            <span class="<#ERROR name='ERRORState'>">
+                                Address State
+                                <span class="req">(required)</span>
+                            </span>
+                        </label>
+                        <select id="State" name="State" size="1" class="custom-select mr-sm-2">
+                            <#OPTION name="custom" groupname="State" selectedValue="<#PARAM name='State'>">
+                        </select><br>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="Zip">
+                            <span class="<#ERROR name='ERRORZip'>">
+                                Address Zip
+                                <span class="req">(required)</span>
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" name="Zip" id="Zip" value="<#PARAM name='Zip'>">
+                    </div>
+
+                </section>
+
+                <section name="delivery-method-info" class="hidden">
+                    <h3>Delivery Methods</h3>
+                    
+                    <div class="form-group col-md-5">
+                        <label for="DeliveryGroup">
+                            <span class="field">
+                                <span class="<#ERROR name='ERRORDeliveryGroup'>">
+                                    Preferred Article Delivery Method
+                                </span>
+                            </span>
+                            <select id="DeliveryGroup" type="hidden" name="DeliveryGroup" size="1" class="custom-select mr-sm-2">
+                                <option selected><#PARAM name='DeliveryGroup'></option>
+                                <option>Hold for Pickup</option>
+                            </select>
+                            <br/>
+                        </label>
+                    </div>
+
+                    <div class="form-group col-md-5">
+                        <label for="LoanDeliveryGroup">
+                            <span class="field">
+                                <span class="<#ERROR name='ERRORLoanDeliveryGroup'>">
+                                    Preferred Loan Delivery Method 
+                                </span>
+                            </span>
+                            <select id="LoanDeliveryGroup" type="hidden" name="LoanDeliveryGroup" size="1" class="custom-select mr-sm-2">
+                                <option selected><#PARAM name='LoanDeliveryGroup'></option>
+                                <option>Mail to Address</option>
+                            </select>
+                            <br>
+                        </label>
+                    </div>
+                
+                    <div class="form-group col-md-5">
+                        <label for="WebDeliveryGroup">
+                            <span class="field">
+                                <span class="<#ERROR name='ERRORWebDeliveryGroup'>">
+                                    Preferred Electronic Delivery if Possible (PDF file via web) 
+                                </span>
+                            </span>
+                            <select id="WebDeliveryGroup" type="hidden" name="WebDeliveryGroup" size="1" class="custom-select mr-sm-2" type="hidden">
+                                <option selected><#PARAM name='WebDeliveryGroup'></option>
+                                <option>No</option>
+                            </select><br/>
+                        </label>
+                    </div>
+                </section>
+                                                                                
+                <button class="btn btn-primary btn-md" type="submit" name="SubmitButton" value="Submit Information">Submit Information</button>
+                <button class="btn btn-secondary btn-md" type="submit" name="SubmitButton" value="Cancel - Return to Logon page">Cancel - Return to Logon page</button>
+
+                <input type="hidden" id="ArticleBillingCategory" name="ArticleBillingCategory" value="<#PARAM name='ArticleBillingCategory'>">
+                <input type="hidden" id="LoanBillingCategory" name="LoanBillingCategory" value="<#PARAM name='LoanBillingCategory'>">
+            </fieldset>
+        </form>		
+	  <#INCLUDE filename="include_footer.html">
+	  <!-- NewAuthRegistration.html -->
+    </div>
+</body>
+</html>

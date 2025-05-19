@@ -1,0 +1,27 @@
+	<div id="logo">
+		<img src="images/bcc_logo.gif" style="float: left;" width="400" height="68" border="0" alt="SUNY Broome Homepage" />
+	</div><!-- end logo -->
+	<div id="topnav">
+		<div id="links">
+			<a class="topnav" href="http://www.sunybroome.edu">SUNY Broome Community College</a> | <a class="topnav" href="http://www.sunybroome.edu/library/">Library</a>
+		</div><!-- end links -->
+	</div><!-- end topnav -->
+
+<div id="header">
+    <div id="title-name"><a href="<#ACTION action="10" form="10">">ILLiad</a></div>
+    <div id="status"></div>
+    <div id="search">
+        <form action="illiad.dll" name="Search" method="post">
+            <input type="hidden" name="IlliadForm" value="Search" />
+            <input id="SessionID" name="SessionID" type="hidden" value="<#PARAM name="SessionID">" />
+            <label for="SearchCriteria">
+                <input id="SearchCriteria" name="SearchCriteria" type="text" class="f-criteria" />				
+            </label>
+            <input type="submit" name="SubmitButton" value="Search" class="f-submit" />
+            <div id="searchType">
+                <input name="SearchType" type="radio" id="SearchTypeActive" value="Active" checked class="f-searchType" /><label for="SearchTypeActive">Active</label>
+                <input name="SearchType" type="radio" id="SearchTypeAll" value="All" class="f-searchType" /><label for="SearchTypeAll">All</label>
+            </div>
+        </form>
+    </div>
+</div>

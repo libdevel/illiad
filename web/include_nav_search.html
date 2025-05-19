@@ -1,0 +1,83 @@
+<nav class="main-navbar navbar navbar-expand-lg navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse my-4 justify-content-center" id="navbarNavDropdown">
+
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link" href="<#ACTION action='10' form='10'>">
+          <span aria-hidden="true" class="fas fa-home"></span>  Main Menu</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarNewRequest" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span aria-hidden="true" class="fas fa-book"></span>   New Requests
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarNewRequest">
+          <a class="dropdown-item" href="<#ACTION action='10' form='22'>">Article</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='21'>">Book</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='23'>">Book Chapter</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='24'>">Conference Paper</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='25'>">Patent</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='26'>">Report</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='27'>">Thesis</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='28'>">Standards Document</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='32'>">Multimedia</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarOrderHistory" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span aria-hidden="true" class="fas fa-history"></span>  History
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarOrderHistory">
+          <a class="dropdown-item" href="<#ACTION action='10' form='60'>"><span aria-hidden="true" class="fas fa-list-alt"></span> All Requests</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='70'>"><span aria-hidden="true" class="fas fa-ban"></span> Cancelled Requests</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='68'>"><span aria-hidden="true" class="fas fa-check-circle"></span> Completed Requests</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="<#ACTION action='10' form='73'>">
+            <span class="far fa-bell"></span>  Notification History
+          </a>
+        </div>                  
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarMyProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span aria-hidden="true" class="fas fa-user"></span> Profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarMyProfile">
+          <a class="dropdown-item" href="<#ACTION action='10' form='81'>">
+            <span aria-hidden="true" class="fas fa-user-edit"></span>  Update Profile
+          </a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='83'>">
+            <span aria-hidden="true" class="fas fa-key"></span>  Change Password
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item disabled" type="text">
+            <span class="far fa-id-badge"></span>  Logged in as <#PARAM name='Username'>
+          </a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="<#ACTION action='99'>">
+            <span aria-hidden="true" class="fas fa-sign-out-alt"></span>  Logoff</a>
+      </li>
+
+      <form action="illiad.dll" name="Search" method="post" class="form-inline my-2 my-lg-0">
+        <input type="hidden" name="ILLiadForm" value="Search">
+        <input type="hidden" name="SearchType" value="Active">
+        <input id="SearchCriteria" class="form-control mr-sm-2" type="search" value="" name="SearchCriteria" title="Search criteria" placeholder="Search" aria-label="Search">            
+        <button class="btn btn-outline-primary my-2 my-sm-0 fas fa-search fa-1x" name="SubmitButton" value="Search" title="Search" type="submit"></button>
+      </form>
+    </ul>
+  </br>
+  
+</nav>
+
+<div class="alerts-bar">
+  <div class="container" id="webAlerts"></div>
+</div>

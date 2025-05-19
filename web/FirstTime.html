@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>ILLiad Logon</title>
+    <#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+	<#INCLUDE filename="include_header.html">
+
+    <div id="status" class="container">
+        By pressing the button below, you acknowledge and agree to all of the terms and conditions below.
+        Please pay particular attention to the copyright statement and the ILLiad FAQ.
+        After reading this information, you can press the "First Time Users Click Here" button below.
+    </div>
+
+    <div id="content" class="container" role="heading" aria-label="Content">
+        <form action="illiad.dll" method="post" name="Logon">
+            <input type="hidden" name="ILLiadForm" value="Logon">
+            <#FORMSTATE>
+
+            <div class="info-block">
+                <h2 class="page-header">First Time User Registration for ILLiad</h2>
+
+                <p>
+                    <span class="new-line">
+                        To request an item, you must first identify yourself to the library's ILLiad system.
+                        To do this you fill out a registration form using your Web browser.
+                    </span>
+                </p>
+
+                <h2 class="page-header">About your Username and Password</h2>
+                <p>
+                    During registration, you will be asked to choose a Username and Password. You will use this Username and Password when logging
+                    on to the ILLiad system in the future.
+                </p>
+
+                <p>
+                    <strong class="new-line">Username</strong>
+                    <span class="new-line">
+                        Choose anything you like, such as your name, abbreviations, or an alphanumeric code.
+                    </span>
+
+                    <strong class="new-line">Password</strong>
+                    <span class="new-line">
+                        Choose anything you like. We recommend that you follow good security practice and choose a password
+                        that is different from those you use to access other systems.
+                    </span>
+                    <span class="new-line">
+                        ILLiad will encrypt your password, so it will remain secure. Only you will know your password.
+                    </span>
+                </p>
+            </div>
+
+            <div class="info-block">
+                <h2 class="page-header">Important Copyright Information</h2>
+                <p>WARNING CONCERNING COPYRIGHT RESTRICTIONS</p>
+                <p>The copyright law of the United States (Title 17, United States Code) governs the making of articles or
+                    other reproductions of copyrighted materials.
+                </p>
+                <p>Under certain conditions specified in the law, libraries and archives are authorized to furnish an article
+                    or other reproduction. One of these specified conditions is that the article or reproduction is not
+                    to be &quot;used for any purpose other than private study, scholarship, or research&quot;. If a user
+                    makes a request for, or later uses, an article or reproduction for purposes in excess of &quot;fair
+                    use&quot;, that user may be liable for copyright infringement.
+                </p>
+                <p>This institution reserves the right to refuse to accept a copying order if, in its judgment, fulfillment
+                    of the order would involve violation of copyright law.
+                </p>
+            </div>
+
+            <h2 class="page-header">ILLiad FAQ (Frequently Asked Questions)</h2>
+            <p>Before registering, you may wish to read the ILLiad
+                <a href="<#ACTION action='10' form='12'>">FAQ</a>. The FAQ may answer other questions you have about the ILLiad interlibrary loan system.
+            </p>
+
+            <p>By pressing this button you acknowledge and agree to all of the terms and conditions above. Please pay particular
+                attention to the copyright statement and the ILLiad FAQ. After reading this information, you can press
+                the &quot;First Time Users Click Here&quot; button to continue.</p>
+
+            <div class="container">
+                <button class="btn btn-primary" type="submit" name="SubmitButton" value="First Time Users Click Here">First Time Users Click Here</button>
+            </div>
+
+        </form>
+        
+		<#INCLUDE filename="include_footer.html">
+    </div>
+
+</body>
+</html>

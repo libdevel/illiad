@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<title>SUNY Broome - ILLiad Logon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="iphone-icon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/illiad.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/cookieconsent.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/webAlerts.js"></script>
+    <script src="js/cookieconsent.min.js" data-cfasync="false"></script>
+    <script src="js/atlasCookieConsent.js"></script>
+
+
+
+</head>
+
+<body>
+    <header>
+        <div> <a href="#content" accesskey="S" onclick="$('#content').focus();" class="offscreen">Skip to Main Content</a></div>
+
+		<!--Logo markup goes below -->
+		<div class="container-fluid logo">
+		      
+		      <div >
+			 <a href="https://www.sunybroome.edu/library/"><img class="img-fluid" src="css/images/sunybroomelibrarylogo.jpg" width="503" style="max-height:75px;"   alt="SUNY Broome Library" /></a> 
+			 </div>
+		</div>
+	<!-- end logo markup -->	
+		<h1>ILLiad</h1> 
+    </header>
+
+    <div class="alerts-bar">
+        <div class="container" id="webAlerts"></div>
+    </div>
+   
+
+    <div id="content" class="container" aria-label="Content">
+        <form action="illiad.dll" method="post" name="Logon">
+            <input type="hidden" name="ILLiadForm" value="Logon">
+
+            <div class="logon-directions">
+                <span class="new-line">
+                    Enter your user information below. Then press the Logon to ILLiad button to continue.
+                </span>
+            </div>
+
+            <div class="logon-field form-group col-md-8">
+                <label for="username">
+                    Username
+                    </label>
+                <input type="text" class="form-control" name="username" id="username" value="">
+            </div>
+
+            <div class="logon-field form-group col-md-8">
+                <label for="password">
+                    Password
+                    </label>
+                <input type="password" class="form-control" name="password" id="password" autocomplete="off">
+            </div>
+
+            <button class="btn btn-primary btn-md" type="submit" name="SubmitButton" value="Logon to ILLiad">Logon to ILLiad</button>
+        </form>
+
+<br /><br />
+
+        <div class="forgot-password-link">
+            <a href="illiad.dll?Action=10&Form=84">
+                <span aria-hidden="true" class="fas fa-question-circle"></span>  Forgot Password?
+            </a>
+        </div>
+
+<br />
+        <form action="illiad.dll" method="post" name="Logon">
+            <input type="hidden" name="ILLiadForm" value="Logon">
+					<div class="f-submit-wrap">
+						<span aria-hidden="true" class="fas fa-user-plus"></span><input type="submit" name="SubmitButton" value="First Time Users Click Here" class="f-submit" />
+					</div>
+		</form>
+<br />
+<p class="new-line">Our interlibrary loan software, Illiad, allows you to borrow materials from other libraries.</p>
+
+
+
+        <footer class="foot">
+			<p><a href="https://sunybroome.info/library/help">Ask a Librarian</a> | <a href="https://sunybroome.info/library/">SUNY Broome Library</a></p>
+
+            <span class="new-line">Powered by <a href="illiad.dll?Action=10&Form=1">ILLiad</a>
+           |     &copy; 2022 <a href="http://www.atlas-sys.com"> Atlas Systems, Inc.</a> All Rights Reserved. |
+  
+                <a href="illiad.dll?Action=10&Form=3">Site Map </a>
+            </span>
+        </footer>
+    </div>
+<!-- Logon.html -->
+</body>
+</html>

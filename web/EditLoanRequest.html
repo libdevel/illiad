@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>ILLiad - Edit Book Request</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html">  
+	
+	<div id="content" class="container" role="heading" aria-label="Content">
+		<form action="illiad.dll" method="post" name="EditLoanRequest">
+			<input type="hidden" name="ILLiadForm" value="EditLoanRequest">
+			<input type="hidden" name="RequestType" value="Loan">
+			<input type="hidden" name="Username" value="<#PARAM name='Username'>">
+			<input type="hidden" name="SessionID" value="<#PARAM name='SessionID'>">
+			<input type="hidden" name="TransactionNumber" value="<#PARAM name='TransactionNumber'>">
+			<input type="hidden" name="ESPNumber" value="<#PARAM name='ESPNumber'>">
+			<input type="hidden" name="CallNumber" value="<#PARAM name='CallNumber'>">
+			<input type="hidden" name="NotWantedAfter" value="<#PARAM name='NotWantedAfter'>">
+					
+			<fieldset>
+	
+				<h2 class="page-header">Edit Book Request</h2>
+				<section name="editbookrequest-info">
+							
+					<div class="form-group col-md-9">
+						<label for="LoanTitle">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanTitle'>">
+									Title
+									<span class="req">(required)</span>
+								</span>
+								<br/>
+								<span class="small-notes">
+									Please do not abbreviate unless your citation is abbreviated
+								</span> 
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanTitle" id="LoanTitle" value="<#PARAM name='LoanTitle'>">
+					</div>
+			
+					<div class="form-group col-md-9">  
+						<label for="LoanAuthor">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanAuthor'>">
+									Author/Editors
+									<span class="req">(required)</span>
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanAuthor" id="LoanAuthor" value="<#PARAM name='LoanAuthor'>">
+					</div>
+			
+					<div class="form-group col-md-9">
+						<label for="LoanPublisher">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanPublisher'>">
+									Publisher
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanPublisher" id="LoanPublisher" value="<#PARAM name='LoanPublisher'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="LoanPlace">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanPlace'>">
+									Place of Publication
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanPlace" id="LoanPlace" value="<#PARAM name='LoanPlace'>">
+					 </div>
+					
+					<div class="form-group col-md-9">
+						<label for="LoanDate">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanDate'>">
+									Date of Publication
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanDate" id="LoanDate" value="<#PARAM name='LoanDate'>">
+					</div>
+		
+					<div class="form-group col-md-9">
+						<label for="LoanEdition">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanEdition'>">
+									Edition
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanEdition" id="LoanEdition" value="<#PARAM name='LoanEdition'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="ISSN">
+							<span class="field">
+								<span class="<#ERROR name='ERRORISSN'>">
+									ISBN (International Standard Book Number)
+								</span>
+								<br>
+							<span class="small-notes">
+								If given will speed request processing
+							</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="ISSN" id="ISSN" value="<#PARAM name='ISSN'>">
+					</div>
+			
+					<!--<div class="form-group col-md-9">
+						<label for="CallNumber">					
+							<span class="field">
+								<span class="<#ERROR name='ERRORCallNumber'>">
+									Call Number
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="CallNumber" id="CallNumber" value="<#PARAM name='CallNumber'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="ESPNumber">
+							<span class="field">
+								<span class="<#ERROR name='ERRORESPNumber'>">
+									OCLC or Docline UI Number
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="ESPNumber" id="ESPNumber" value="<#PARAM name='ESPNumber'>">
+					</div>-->
+					
+					<div class="form-group col-md-9">
+						<label for="AcceptAlternateEdition">
+							<span class="field">
+								<span class="<#ERROR name='ERRORAcceptAlternateEdition'>">
+									Will you accept an alternate edition of this item?
+								</span>
+							</span>
+						</label>
+						<select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="custom-select mr-sm-2">
+							<option selected><#PARAM name='AcceptAlternateEdition'></option>
+							<option>No</option>
+						</select>
+					</div>
+						
+					<div class="form-group col-md-9">
+						<label for="Notes">
+							<span class="field">
+								<span class="<#ERROR name='ERRORNotes'>">  
+									Notes   
+								</span><br>
+								<span class="small-notes">
+									Put any information here that may help us find the item, as well as any other pertinent information.</span>
+							</span>
+						</label>
+						<textarea id="Notes" name="Notes" rows="2" cols="40" class="form-control" value="<#PARAM name='Notes'>"></textarea><br>
+					</div>
+					
+				</section>
+				<#INCLUDE filename="include_request_cited.html">                
+				<#INCLUDE filename="include_request_buttons.html">
+			</fieldset>
+		</form>
+		<#INCLUDE filename="include_footer.html">
+	</div>
+</body>
+</html>

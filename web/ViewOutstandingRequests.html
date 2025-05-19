@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>ILLiad - Outstanding Request</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+	<#INCLUDE filename="include_header.html">
+	<#INCLUDE filename="include_menu.html">
+	
+	<div id="content" class="container" role="heading" aria-label="Content">
+			
+		<h2 class="page-header">Outstanding Requests</h2>	
+
+		<#DATAREPEATER name="ViewOutstandingRequests" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="You have no outstanding requests" orderby="TransactionNumber DESC">
+
+		<#INCLUDE filename="include_footer.html">  
+	</div> 
+</body>
+</html>
