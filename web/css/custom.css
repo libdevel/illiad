@@ -1,0 +1,47 @@
+/*
+    custom.css
+    Any site-specific CSS customization should be added to this file.
+    This file overrides the defaults in illiad.css, which should not be altered.
+*/
+
+
+@font-face {
+    font-family: 'albertus_mediumregular';
+	font-weight:400;
+	font-style: normal;
+	font-display: block;
+    src: url('../fonts/albr55w-webfont.eot');
+    src: url('../fonts/albr55w-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/albr55w-webfont.woff') format('woff'),
+         url('../fonts/albr55w-webfont.svg#albertus_mediumregular') format('svg');
+}
+
+
+
+header {margin-bottom: 10px;}
+.head { background-color: #fff; height: auto;
+    padding: 0px; text-align: center; width: 100%;}
+
+
+.campus-logo-bar {border-top: 10px solid #eeb310;
+  background-color: #000; height: 65px;color: #fff;padding:10px; text-align: left;}
+
+.campus-logo img {height: 27px; }
+
+.campus-logo a {text-decoration:none;}
+
+.library-logo-bar { background-color: #fff; border-bottom: 1px solid #666; min-height: 65px;padding:5px; text-align: left;}
+
+.library-logo a {/*padding-top: 30px;*/ margin-top:10px; font-family:'albertus_mediumregular';
+    font-size: 2.0em; text-transform: none; color:#000;text-decoration:none; } 
+
+
+.forgot-password-link, .first-time-link {
+  padding: 30px 0 0;
+}
+
+
+@media (min-width: 992px) {
+    .library-logo-bar {min-height:90px;}
+    .library-logo a {font-size:2.5em;}
+}
