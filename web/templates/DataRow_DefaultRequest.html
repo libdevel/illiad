@@ -1,0 +1,64 @@
+<div class="card requestResult">
+    <div id="request<#DATAROW field='TransactionNumber'>">
+      	<div class="card-body">
+			<div class="row">
+				<div class="col-lg-8 col-md-12">
+					<h4 class="card-title">
+						<a href="<#ACTION action='10' form='72'>&Value=<#DATAROW field='TransactionNumber'>"><#DATAROW field='Title'></a>
+					</h4>
+					<h5 class="card-subtitle text-muted"><#DATAROW field='Author'></h5>
+				</div>
+
+      			<div class="col-lg-4 col-md-12 text-right">
+					<div class="btn-group" role="group" aria-label="Actions for Reqest <#DATAROW field='TransactionNumber'>">
+				  		<a class="btn btn-primary" role="button" href="<#ACTION action='10' form='72'>&Value=<#DATAROW field='TransactionNumber'>"><span class="fas fa-info-circle"></span> &nbsp;Details</a>
+
+				  		<div class="btn-group" role="group">
+							<button id="btnGroupDrop<#DATAROW field='TransactionNumber'>" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Actions
+							</button>
+							<div class="dropdown-menu" aria-labelledby="btnGroupDrop<#DATAROW field='TransactionNumber'>">
+								<a class="dropdown-item btn btn-light <#DATAROW field='RequestActionAllowed' name='Edit' disabledValue='disabled'>" href="<#ACTION action='20' form='72'>&Value=<#DATAROW field='TransactionNumber'>" class="menuEdit"><span aria-hidden="true" class="fas fa-edit text-primary"></span>  Edit</a>
+								<a class="dropdown-item btn btn-light <#DATAROW field='RequestActionAllowed' name='Cancel' disabledValue='disabled'>" href="<#ACTION action='21' type='10'>&Value=<#DATAROW field='TransactionNumber'>" class="menuCancel"><span aria-hidden="true" class="fas fa-ban text-danger"></span>  Cancel Request</a>
+								<div class="<#DATAROW field='RequestType' displayStyle='CompareValue' compareValue='Loan' disabledValue='d-none'>">
+									<a class="dropdown-item btn btn-light <#DATAROW field='RequestActionAllowed' name='Renew' disabledValue='disabled'>" href="<#ACTION action='11' form='67'>&Value=<#DATAROW field='TransactionNumber'>" class="menuRenew"><span aria-hidden="true" class="fas fa-calendar-alt"></span>  Renew</a>
+								</div>
+								<a class="dropdown-item btn btn-light <#DATAROW field='RequestActionAllowed' name='Resubmit' disabledValue='disabled'>"	href="<#ACTION action='11' form='71'>&Value=<#DATAROW field='TransactionNumber'>" class="menuResubmit"><span aria-hidden="true" class="fas fa-redo"></span>  Resubmit Request</a>
+								<a class="dropdown-item btn btn-light <#DATAROW field='RequestActionAllowed' name='Clone' disabledValue='disabled'>" href="<#ACTION action='11' form='110'>&Value=<#DATAROW field='TransactionNumber'>" class="menuClone"><span aria-hidden="true" class="fas fa-copy text-primary"></span>  Clone Request</a>
+								<div class="<#DATAROW field='RequestType' displayStyle='CompareValue' compareValue='Article' disabledValue='d-none'>">
+									<a class="dropdown-item btn btn-light <#DATAROW field='RequestActionAllowed' name='ViewPDF' disabledValue='disabled'>" href="<#ACTION action='10' form='75'>&Value=<#DATAROW field='TransactionNumber'>" class="menuViewPdf"><span aria-hidden="true" class="fas fa-eye"></span>  View PDF</a>
+									<a class="dropdown-item btn btn-light <#DATAROW field='RequestActionAllowed' name='DeletePDF' disabledValue='disabled'>" href="<#ACTION action='22' type='11' form='72'>&Value=<#DATAROW field='TransactionNumber'>" class="menuDeletePdf"><span aria-hidden="true" class="fas fa-trash-alt"></span>  Delete PDF</a>
+									<a class="dropdown-item btn btn-light <#DATAROW field='RequestActionAllowed' name='UndeletePDF' disabledValue='disabled'>" href="<#ACTION action='21' type='11'>&Value=<#DATAROW field='TransactionNumber'>" class="menuUndo"><span class="fa-stack" style="vertical-align: top;">
+											<span class="fas fa-trash-alt fa-stack-1x"></span>
+											<span class="fas fa-ban fa-stack-2x text-danger"></span>	
+										</span>							
+										Undelete
+									</a>
+								</div>
+							</div>
+				  		</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-7 col-md-12">
+					<div class="field text-muted">Transaction Number&nbsp; <span class="field-value font-weight-bold"><#DATAROW field='TransactionNumber'></span></div>
+				</div>
+				<div class="col-lg-5 col-md-12 text-right">
+					<div class="field mb2 text-muted">
+						<span class="field-value font-weight-bold tool-tip">
+							<#DATAROW field='TransactionStatus'>
+							<span class="tool-tip-text">
+								Moved to <#DATAROW field='TransactionStatus'> on 
+								<span class="convert-local" data-iso8601="<#DATAROW field='TransactionDate' display='ISO8601'>"><#DATAROW field='TransactionDate'></span>
+							</span>
+						</span>
+					</div>
+					<div class="field mb2 text-muted">
+						Due Date&nbsp;<span class="field-value font-weight-bold"><#DATAROW field='DueDate'></span>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
