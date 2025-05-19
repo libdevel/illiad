@@ -29,6 +29,7 @@ $(document).ready(function () {
 	$('.statusError').addClass('alert alert-danger d-block').attr('role','alert');
 	$('.statusInformation').addClass('alert alert-info d-block').attr('role','alert');
 	
+	
 	//Hide field-values if there is no value inside (when the field does not also have a class of showEmptyValue)
 	$('.field-value:empty').closest('.field:not(.showEmptyValue)').hide();
 
@@ -50,6 +51,7 @@ $(document).ready(function () {
 	$("input[type=radio][data-persisted-value],input[type=checkbox][data-persisted-value]").each(function(idx, el) { SelectPersistedValue(el) });
 	//Legacy support if using "data-persistedValue"
 	$("select[data-persistedValue]").each(function(idx, el) { SelectPersistedValue(el, $(el).attr('data-persistedValue')) });
+
 });
 
 

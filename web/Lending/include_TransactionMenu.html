@@ -1,0 +1,44 @@
+<div id="transaction-menu" class="d-flex justify-content-center mb-1 mt-4">
+    <div class="btn-group flex-column flex-grow-1 flex-md-row flex-md-grow-0" role="group">
+
+        <a class="btn btn-light menuEdit my-1 py-2 <#TRANSACTION field='RequestActionAllowed' name='Edit' disabledValue='disabled'>"
+            href="<#ACTION action='20' form='63'>&amp;Value=<#TRANSACTION field='TransactionNumber'>">
+             <span aria-hidden="true" class="fas fa-edit text-primary"></span>  Edit Request
+        </a>
+
+        <a class="btn btn-light menuCancel my-1 py-2 <#TRANSACTION field='RequestActionAllowed' name='Cancel' disabledValue='disabled'>"
+            href="<#ACTION action='21' type='10'>&amp;Value=<#TRANSACTION field='TransactionNumber'>">
+             <span aria-hidden="true" class="fas fa-ban text-danger"></span>  Cancel Request
+        </a>
+
+        <div class="btn-group <#TRANSACTION field='RequestType' displayStyle='CompareValue' compareValue='Loan' disabledValue='d-none'>">
+            <a class="btn btn-light menuRenew my-1 py-2 <#TRANSACTION field='RequestActionAllowed' name='Renew' disabledValue='disabled'>"
+                href="<#ACTION action='11' form='67'>&amp;Value=<#TRANSACTION field='TransactionNumber'>">
+                <span aria-hidden="true" class="fas fa-calendar-alt "></span>  Renew
+            </a>
+        </div>
+        
+        <a class="btn btn-light menuResubmit my-1 py-2 <#TRANSACTION field='RequestActionAllowed' name='Resubmit' disabledValue='disabled'>"
+            href="<#ACTION action='11' form='71'>&amp;Value=<#TRANSACTION field='TransactionNumber'>">            
+            <span aria-hidden="true" class="fas fa-redo"></span>  Resubmit Request
+        </a>
+
+        <a class="btn btn-light menuClone my-1 py-2 <#TRANSACTION field='RequestActionAllowed' name='Clone' disabledValue='disabled'>"
+            href="<#ACTION action='11' form='110'>&amp;Value=<#TRANSACTION field='TransactionNumber'>">
+             <span aria-hidden="true" class="fas fa-clone text-primary"></span>  Clone Request
+        </a>
+    
+        <div class="btn-group flex-column flex-grow-1 flex-md-row flex-md-grow-0 <#TRANSACTION field='RequestType' displayStyle='CompareValue' compareValue='Article' disabledValue='d-none'>">
+            <a class="btn btn-light menuViewPdf my-1 py-2 <#TRANSACTION field='RequestActionAllowed' name='ViewPDF' disabledValue='disabled'>"
+                href="<#ACTION action='10' form='75'>&amp;Value=<#TRANSACTION field='TransactionNumber'>">
+                <span aria-hidden="true" class="fas fa-eye"></span>  View Item
+            </a>
+        
+            <a class="btn btn-light menuDeletePdf my-1 py-2 <#TRANSACTION field='RequestActionAllowed' name='DeletePDF' disabledValue='disabled'>"
+                href="<#ACTION action='22' type='11'>&amp;Value=<#TRANSACTION field='TransactionNumber'>">
+                <span aria-hidden="true" class="fas fa-trash-alt"></span>  Delete Item
+            </a>
+        </div>
+        
+    </div>
+</div>

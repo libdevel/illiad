@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>ILLiad Site Map</title>
+    <#INCLUDE filename="include_head.html">
+    <script src="js/buildSiteMap.min.js"></script>
+</head>
+
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html" restriction="IsValidSession">
+    
+    <div class="alerts-bar">
+        <div class="container" id="webAlerts"></div>
+    </div>
+
+    <div class="container">
+        <main id="content" aria-label="Content">
+            <div id="site-map"></div>
+        </main>
+        <#INCLUDE filename="include_footer.html">
+    </div>
+</body>
+</html>
+

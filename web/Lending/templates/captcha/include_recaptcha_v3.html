@@ -1,0 +1,21 @@
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    function onSubmit(token) {
+        var form = document.getElementById("registration-form");
+
+        var submitButton = document.getElementById("SubmitButton");
+        if (!submitButton) {
+            submitButton = document.createElement("button");
+            submitButton.type = "submit";
+            submitButton.name = "SubmitButton";
+            submitButton.id = "SubmitButton";
+            submitButton.value = "Submit Information";
+            submitButton.innerText = "Submit Information";
+            submitButton.classList.add("d-none");
+            form.appendChild(submitButton);
+        }
+        submitButton.click();
+
+    }
+</script>
+<button class="g-recaptcha btn btn-primary btn-md" type="submit" data-sitekey="<#CUSTOMIZATION name=CaptchaSiteId />" data-callback="onSubmit" data-action='submit'>Submit Information</button>

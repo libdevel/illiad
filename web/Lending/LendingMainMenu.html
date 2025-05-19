@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>ILLiad Main Menu</title>
+    <#INCLUDE filename="include_head.html">
+
+    <link href="<#ACTION action='2' type='40' value='RSSID' valueType='lookup' absolutePath='true' includeSessionID='false'>" rel='alternate' type='application/rss+xml' title='ILLiad Alerts'>
+</head>
+
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html">
+
+    <div class="container">
+        <main id="content" aria-label="Content">
+
+            <div id="table-main-shipped-items">
+                <h2 class="header-special"><span aria-hidden="true" class="fas fa-file-alt fa-1x"></span> Shipped Requests</h2>
+                <#DATAREPEATER name="ViewShippedItems" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="You have no shipped requests" orderby="TransactionNumber DESC">
+            </div> 
+
+            <div id="table-main-outstanding-requests">
+                <h2 class="header-special"><span aria-hidden="true" class="fas fa-file-alt fa-1x"></span> Outstanding Requests</h2>
+                <#DATAREPEATER name="ViewOutstandingLendingRequests" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="You have no outstanding delivery requests" orderby="TransactionNumber DESC">
+            </div> 
+
+        </main>
+        
+        <#INCLUDE filename="include_footer.html">
+    </div>
+
+</body>
+
+</html>
+

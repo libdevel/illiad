@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>ILLiad - Request History</title>
+    <#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html">
+
+    <div class="container">
+        <main id="content" aria-label="Content">
+
+            <h2 class="page-header">Request History</h2>
+        
+            <#DATAREPEATER name="ViewLendingRequestHistory" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="No requests" orderby="TransactionNumber DESC">
+                
+        </main>
+        <#INCLUDE filename="include_footer.html">
+    </div>
+</body>
+</html>

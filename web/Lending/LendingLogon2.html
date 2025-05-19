@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<title>ILLiad - Logon</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+	<#INCLUDE filename="include_header.html">
+
+	<div class="container">
+		<main id="content" aria-label="Content">
+			<div id="status" class="container"><#STATUS></div>
+
+			<form action="<#DLL>" method="post" id="Logon">
+				<input type="hidden" name="ILLiadForm" value="Logon">
+
+				<div class="logon-directions">
+					<div>Enter your user information below.</div>
+					<div>Then press the Logon to ILLiad button to continue.</div>
+				</div>
+
+				<div class="logon-field form-group col-md-8">
+					<label for="username">
+						Username
+					</label>
+					<input type="text" class="form-control" name="username" id="username" value="">
+				</div>
+
+				<div class="logon-field form-group col-md-8">
+					<label for="password">
+						Password
+					</label>
+					<input type="password" name="password" class="form-control" id="password" autocomplete="off">
+				</div>
+				<button class="btn btn-primary btn-md" type="submit" name="SubmitButton" value="Logon to ILLiad">Logon to ILLiad</button>
+			</form>
+
+			<div class="container" aria-label="Account creation and password reset">
+				<div class="forgot-password-link">
+					<a href="illiadlending.dll?Action=10&amp;Form=84">
+						<span aria-hidden="true" class="fas fa-question-circle"></span> Forgot Password?
+					</a><br>
+				</div>
+
+				<div class="first-time-link">
+					<a href="illiadlending.dll?Action=10&amp;Form=79">
+						<span aria-hidden="true" class="fas fa-user-plus"></span> First Time Users
+					</a>
+				</div>
+			</div>
+
+		</main>
+
+		<#INCLUDE filename="include_footer.html">
+
+	</div>
+
+</body>
+</html>

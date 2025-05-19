@@ -1,0 +1,51 @@
+<div class="card requestResult">
+        <div id="request<#DATAROW field='TransactionNumber'>">
+          <div class="card-body">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="h4 card-title">
+                        <a href="<#ACTION action='10' form='72'>&amp;Value=<#DATAROW field='TransactionNumber'>"><#DATAROW field="Title"></a>
+                    </div>
+                    <div class="h5 card-subtitle text-muted"><#DATAROW field="Author"></div>
+                </div>
+    
+                <div class="col-lg-4 col-md-12 text-right">
+                    <div class="btn-group" role="group" aria-label="Actions for Request <#DATAROW field='TransactionNumber'>">
+                    <a class="btn btn-primary" href="<#ACTION action='10' form='72'>&amp;Value=<#DATAROW field='TransactionNumber'>"><span class="fa fa-info-circle mr-1"></span>Details</a>
+    
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop<#DATAROW field='TransactionNumber'>" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop<#DATAROW field='TransactionNumber'>">
+                                <a class="dropdown-item btn btn-light menuEdit <#DATAROW field='RequestActionAllowed' name='Edit' disabledValue='disabled'>" href="<#ACTION action='20' form='72'>&amp;Value=<#DATAROW field='TransactionNumber'>"><span aria-hidden="true" class="fas fa-edit text-primary mr-1"></span>Edit</a>
+                                <a class="dropdown-item btn btn-light menuCancel <#DATAROW field='RequestActionAllowed' name='Cancel' disabledValue='disabled'>" href="<#ACTION action='21' type='10'>&amp;Value=<#DATAROW field='TransactionNumber'>"><span aria-hidden="true" class="fas fa-ban text-danger mr-1"></span>Cancel Request</a>
+                                <div class="<#DATAROW field='RequestType' displayStyle='CompareValue' compareValue='Loan' disabledValue='d-none'>">
+                                    <a class="dropdown-item btn btn-light menuRenew <#DATAROW field='RequestActionAllowed' name='Renew' disabledValue='disabled'>" href="<#ACTION action='11' form='67'>&amp;Value=<#DATAROW field='TransactionNumber'>"><span aria-hidden="true" class="fas fa-calendar-alt mr-1"></span>Renew</a>
+                                </div>
+                                <a class="dropdown-item btn btn-light menuResubmit <#DATAROW field='RequestActionAllowed' name='Resubmit' disabledValue='disabled'>" href="<#ACTION action='11' form='71'>&amp;Value=<#DATAROW field='TransactionNumber'>"><span aria-hidden="true" class="fas fa-redo mr-1"></span>Resubmit Request</a>
+                                <a class="dropdown-item btn btn-light menuClone <#DATAROW field='RequestActionAllowed' name='Clone' disabledValue='disabled'>" href="<#ACTION action='11' form='110'>&amp;Value=<#DATAROW field='TransactionNumber'>"><span aria-hidden="true" class="fas fa-copy text-primary mr-1"></span>Clone Request</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-7 col-md-12">
+                    <div class="field text-muted">Transaction Number <span class="field-value font-weight-bold mr-1"><#DATAROW field="TransactionNumber"></span></div>
+                </div>
+                <div class="col-lg-5 col-md-12 text-right">
+                    <div class="field mb2 text-muted">
+                        Item Status
+                        <span class="field-value font-weight-bold">
+                            <#DATAROW field="TransactionStatus">
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>ILLiad - Search</title>
+    <#INCLUDE filename="include_head.html">      
+</head>
+
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html">
+
+    <div class="container">
+        <main id="content" aria-label="Content">
+            <h2 class="page-header">Search</h2>
+        
+            <div id="search">
+                <form action="illiadlending.dll" id="search-form" method="post">
+                    <input type="hidden" name="ILLiadForm" value="Search">
+
+                    <div class="form-inline m-0">
+                        <input id="SearchCriteria" class="form-control mr-1" value="<#PARAM name='SearchCriteria'>" name="SearchCriteria" type="text" title="Search criteria">
+                        <input class="btn btn-primary" type="submit" name="SubmitButton" value="Search" title="Search">
+                    </div>
+
+                    <!--Switch control for search filtering-->
+                    <!--
+                    <div class="custom-control custom-switch mb-4" id="customSearchType">
+                        <input type="checkbox" name="SearchType" class="custom-control-input" id="SearchType" value="Active" data-persisted-value="<#PARAM name='SearchType'>">
+                        <label class="custom-control-label" for="SearchType">Search <strong>only</strong> active requests</label>
+                    </div>
+                    -->
+
+                    <!--Radio control for search filtering-->
+                    
+                    <div id="searchType" class="mb-3 mt-1">
+                        <div class="form-check form-check-inline mr-3 mb-3">
+                            <input checked class="form-check-input" name="SearchType" type="radio" id="SearchTypeActive" value="Active" data-persisted-value="<#PARAM name='SearchType'>">
+                            <label for="SearchTypeActive" class="form-check-label"><span>Search <strong>only</strong> active requests</span></label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="SearchType" type="radio" id="SearchTypeAll" value="All" data-persisted-value="<#PARAM name='SearchType'>">
+                            <label for="SearchTypeAll" class="form-check-label">Search all requests</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="searchResults">
+                <#DATAREPEATER name="ViewSearchResults" TemplateFile="templates/DataRow_DefaultRequest.html"  orderby="TransactionNumber DESC">
+            
+                <div id="no-results-message" style="display: none;">
+                    There are no search results for
+                    <span id="searchTerm"><strong><#PARAM name="searchCriteria"></strong></span>
+                </div>
+            </div>
+
+        </main>
+
+        <#INCLUDE filename="include_footer.html">
+    </div>
+
+    <script>
+        $(document).ready(function () {
+             if (($('#searchResults .requestResult').length == 0) && ($('#searchTerm').text() != '')) {  
+                 $('#no-results-message').show();
+              }   
+            else
+            {
+                $('#no-results-message').hide();
+            }
+        });
+     </script>
+</body>
+</html>
+

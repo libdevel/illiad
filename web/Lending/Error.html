@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>ILLiad - Error</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+    <#INCLUDE filename="include_header.html">
+	<#INCLUDE filename="include_nav.html" restriction="IsValidSession">
+	
+	<div class="container">	
+		<main id="content" aria-label="Content">
+			<div id="status" class="container">
+			<#STATUS>
+			</div>
+			
+		</main>
+		<#INCLUDE filename="include_footer.html">
+	</div>
+</body>
+</html>
+

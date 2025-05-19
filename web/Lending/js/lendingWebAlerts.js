@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $.ajax({
         method: 'GET',
-        url: 'illiad.dll/ajax?query=webAlerts',
+        url: 'illiadlending.dll/ajax?query=webAlerts',
         cache: false
     })
         .done(function (data) {
