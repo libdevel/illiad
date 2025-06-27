@@ -1,4 +1,4 @@
-# SUNY Broome Illiad Web Templates 
+# Illiad Web Templates 
 
 
 ## Web Interface
